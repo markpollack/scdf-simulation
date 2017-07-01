@@ -51,6 +51,8 @@ $ java -jar source/target/scdf-source-0.1.0.jar
 
 The tagging and metadata is not yet present to identify the components easily.
 
+The white spaces between the bars is the time spent on the wire and inside the broker.
+
 ![Jaeger Trace view](/scdf-simulation-1.png)
 
 The [Trace JSON](trace.json) file can be used to build other views that show the topology over the timeline.
