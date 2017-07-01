@@ -1,0 +1,212 @@
+{
+  "data": [
+    {
+      "traceID": "4cfd58f6c45d2c68",
+      "spans": [
+        {
+          "traceID": "4cfd58f6c45d2c68",
+          "spanID": "4cfd58f6c45d2c68",
+          "flags": 1,
+          "operationName": "jms-send",
+          "references": [
+            
+          ],
+          "startTime": 1.498917325721e+15,
+          "duration": 15577,
+          "tags": [
+            {
+              "key": "component",
+              "type": "string",
+              "value": "java-jms"
+            },
+            {
+              "key": "message_bus.destination",
+              "type": "string",
+              "value": "topic:\/\/destination1"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "producer"
+            },
+            {
+              "key": "sampler.type",
+              "type": "string",
+              "value": "probabilistic"
+            },
+            {
+              "key": "sampler.param",
+              "type": "float64",
+              "value": 1
+            }
+          ],
+          "logs": [
+            
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "4cfd58f6c45d2c68",
+          "spanID": "597d9254205d6f51",
+          "flags": 1,
+          "operationName": "jms-receive",
+          "references": [
+            {
+              "refType": "FOLLOWS_FROM",
+              "traceID": "4cfd58f6c45d2c68",
+              "spanID": "97e66afdb2e62892"
+            }
+          ],
+          "startTime": 1.498917325887e+15,
+          "duration": 125836,
+          "tags": [
+            {
+              "key": "component",
+              "type": "string",
+              "value": "java-jms"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "consumer"
+            }
+          ],
+          "logs": [
+            
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "4cfd58f6c45d2c68",
+          "spanID": "4ee65ce4dd3e28de",
+          "flags": 1,
+          "operationName": "jms-receive",
+          "references": [
+            {
+              "refType": "FOLLOWS_FROM",
+              "traceID": "4cfd58f6c45d2c68",
+              "spanID": "4cfd58f6c45d2c68"
+            }
+          ],
+          "startTime": 1.498917325764e+15,
+          "duration": 98475,
+          "tags": [
+            {
+              "key": "component",
+              "type": "string",
+              "value": "java-jms"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "consumer"
+            }
+          ],
+          "logs": [
+            
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "4cfd58f6c45d2c68",
+          "spanID": "97e66afdb2e62892",
+          "flags": 1,
+          "operationName": "jms-send",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "4cfd58f6c45d2c68",
+              "spanID": "b078311a1f42a245"
+            }
+          ],
+          "startTime": 1.498917325841e+15,
+          "duration": 10633,
+          "tags": [
+            {
+              "key": "component",
+              "type": "string",
+              "value": "java-jms"
+            },
+            {
+              "key": "message_bus.destination",
+              "type": "string",
+              "value": "topic:\/\/destination2"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "producer"
+            }
+          ],
+          "logs": [
+            
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "4cfd58f6c45d2c68",
+          "spanID": "b078311a1f42a245",
+          "flags": 1,
+          "operationName": "jms-receive",
+          "references": [
+            {
+              "refType": "FOLLOWS_FROM",
+              "traceID": "4cfd58f6c45d2c68",
+              "spanID": "4cfd58f6c45d2c68"
+            }
+          ],
+          "startTime": 1.498917325761e+15,
+          "duration": 115544,
+          "tags": [
+            {
+              "key": "component",
+              "type": "string",
+              "value": "java-jms"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "consumer"
+            }
+          ],
+          "logs": [
+            
+          ],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "scdf-simulation",
+          "tags": [
+            {
+              "key": "hostname",
+              "type": "string",
+              "value": "mpollack-p70"
+            },
+            {
+              "key": "ip",
+              "type": "string",
+              "value": "127.0.1.1"
+            },
+            {
+              "key": "jaeger.version",
+              "type": "string",
+              "value": "Java-0.20.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 0,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}
