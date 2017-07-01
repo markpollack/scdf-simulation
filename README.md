@@ -27,6 +27,8 @@ $ docker run --rm -it --network=host jaegertracing/all-in-one
 $ ./build.sh
 ```
 
+# Run the apps
+
 * Run the listener applications, each command in a separate shell window.
 
 ```
@@ -43,8 +45,9 @@ $ java -jar tap/target/scdf-tap-0.1.0.jar
 $ java -jar source/target/scdf-source-0.1.0.jar 
 ```
 
+# View the Traces
 
-* Open the Jaeger UI at `http://localhost:16686/` and look for the service named `scdf-simulation` and push the `Find Traces` button, you should see one trace with a two sends and three receives.  The first send is from the source to the transformer, the second send is from the transformer to the sink.  One receive is from the source to the transformer and another receive is from the source to the tap.  The last receive is from the transformer to the sink.
+* Open the Jaeger UI at `http://localhost:16686/` and look for the service named `scdf-simulation` and push the `Find Traces` button, you should see one trace with a two sends and three receives.  The first send is from the source to the transformer, the second send is from the transformer to the sink.  The second send is 'inside' the overall recieve of the transformer app.  One receive is from the source to the transformer and another receive is from the source to the tap.  The last receive is from the transformer to the sink.  If you run the source multiple times, the length of some of the processing goes down as JIT will kick in.
 
 The tagging and metadata is not yet present to identify the components easily.
 
